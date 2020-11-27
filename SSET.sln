@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "checkerboard", "checkerboard\checkerboard.vcxproj", "{E5CC9A66-F5B7-495C-BEB4-F3478D8CF43F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "envelopes", "envelopes\envelopes.vcxproj", "{444D34CC-8AD9-4F83-952D-30642DE0251D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E5CC9A66-F5B7-495C-BEB4-F3478D8CF43F}.Release|x64.Build.0 = Release|x64
 		{E5CC9A66-F5B7-495C-BEB4-F3478D8CF43F}.Release|x86.ActiveCfg = Release|Win32
 		{E5CC9A66-F5B7-495C-BEB4-F3478D8CF43F}.Release|x86.Build.0 = Release|Win32
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Debug|x64.ActiveCfg = Debug|x64
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Debug|x64.Build.0 = Debug|x64
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Debug|x86.ActiveCfg = Debug|Win32
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Debug|x86.Build.0 = Debug|Win32
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x64.ActiveCfg = Release|x64
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x64.Build.0 = Release|x64
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x86.ActiveCfg = Release|Win32
+		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

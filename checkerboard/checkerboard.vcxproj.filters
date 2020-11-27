@@ -14,4 +14,29 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="piece.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="checkerboard.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cbhandler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="piece.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checkerboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cbhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
