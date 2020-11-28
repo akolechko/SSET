@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{444d34cc-8ad9-4f83-952d-30642de0251d}</ProjectGuid>
-    <RootNamespace>envelopes</RootNamespace>
+    <ProjectGuid>{9a63a982-f289-45a8-808e-803072883b0e}</ProjectGuid>
+    <RootNamespace>triangles</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="envelope.cc" />
     <ClCompile Include="main.cc" />
+    <ClCompile Include="shape.cc" />
+    <ClCompile Include="ui.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="envelope.h" />
-    <ClInclude Include="validation.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="shape_handler.h" />
+    <ClInclude Include="ui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

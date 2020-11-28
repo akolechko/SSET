@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "checkerboard", "checkerboar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "envelopes", "envelopes\envelopes.vcxproj", "{444D34CC-8AD9-4F83-952D-30642DE0251D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "triangles", "triangles\triangles.vcxproj", "{9A63A982-F289-45A8-808E-803072883B0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x64.Build.0 = Release|x64
 		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x86.ActiveCfg = Release|Win32
 		{444D34CC-8AD9-4F83-952D-30642DE0251D}.Release|x86.Build.0 = Release|Win32
+		{9A63A982-F289-45A8-808E-803072883B0E}.Debug|x64.ActiveCfg = Debug|x64
+		{9A63A982-F289-45A8-808E-803072883B0E}.Debug|x64.Build.0 = Debug|x64
+		{9A63A982-F289-45A8-808E-803072883B0E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9A63A982-F289-45A8-808E-803072883B0E}.Debug|x86.Build.0 = Debug|Win32
+		{9A63A982-F289-45A8-808E-803072883B0E}.Release|x64.ActiveCfg = Release|x64
+		{9A63A982-F289-45A8-808E-803072883B0E}.Release|x64.Build.0 = Release|x64
+		{9A63A982-F289-45A8-808E-803072883B0E}.Release|x86.ActiveCfg = Release|Win32
+		{9A63A982-F289-45A8-808E-803072883B0E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
