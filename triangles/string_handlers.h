@@ -3,16 +3,16 @@
 #include <vector>
 
 void LTrim(std::string &str) {
-  str.erase(str.begin(), std::find_if(str.begin(), str.end(), [](unsigned char ch) {
-            return !std::isspace(ch);
-          }));
+  str.erase(str.begin(),
+            std::find_if(str.begin(), str.end(),
+                         [](unsigned char ch) { return !std::isspace(ch); }));
 }
 
 void RTrim(std::string &str) {
   str.erase(std::find_if(str.rbegin(), str.rend(),
-                       [](unsigned char ch) { return !std::isspace(ch); })
-              .base(),
-          str.end());
+                         [](unsigned char ch) { return !std::isspace(ch); })
+                .base(),
+            str.end());
 }
 
 void Trim(std::string &str) {
@@ -20,8 +20,8 @@ void Trim(std::string &str) {
   RTrim(str);
 }
 
-std::vector<std::string> StringSplitter(const std::string& str,
-    std::string delimiter) {
+std::vector<std::string> StringSplitter(const std::string &str,
+                                        std::string delimiter) {
   std::vector<std::string> substrings;
   std::string s = str;
   std::string substring;
@@ -42,6 +42,6 @@ std::vector<std::string> StringSplitter(const std::string& str,
 std::string ToLower(const std::string &str) {
   std::string s;
   for (char ch : str) s += tolower(ch);
-  
+
   return s;
 }

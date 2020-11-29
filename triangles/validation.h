@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include "shape.h"
 
 template <class T>
