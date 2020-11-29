@@ -141,12 +141,18 @@
   <ItemGroup>
     <ClCompile Include="main.cc" />
     <ClCompile Include="shape.cc" />
+    <ClCompile Include="triangle.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="input_validation.h" />
     <ClInclude Include="shape.h" />
+    <ClInclude Include="shapes.h" />
     <ClInclude Include="shape_handler.h" />
+    <ClInclude Include="string_functions.h" />
     <ClInclude Include="string_handlers.h" />
+    <ClInclude Include="triangle.h" />
     <ClInclude Include="ui.h" />
+    <ClInclude Include="user_interface.h" />
     <ClInclude Include="validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

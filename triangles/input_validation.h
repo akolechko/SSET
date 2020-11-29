@@ -1,5 +1,5 @@
 #pragma once
-#include "shape.h"
+#include <string>
 
 template <class T>
 bool IsValid(const std::string &str) = delete;
