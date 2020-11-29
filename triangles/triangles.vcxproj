@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="shape.h" />
     <ClInclude Include="shape_handler.h" />
+    <ClInclude Include="string_handlers.h" />
     <ClInclude Include="ui.h" />
     <ClInclude Include="validation.h" />
   </ItemGroup>
