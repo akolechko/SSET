@@ -17,7 +17,7 @@ int main() {
     substrings = StringSplitter(str, delimiter);
 
     for (int i = 1; i < substrings.size(); ++i) {
-      if (IsValid<double>(substrings[i])) {
+      if (IsValid<double>(substrings[i])) {  // Floating point validation
         sides.push_back(strtod(substrings[i].c_str(), nullptr));
         flag = false;
       } else {
@@ -35,7 +35,7 @@ int main() {
       continue;
     }
 
-    if (shapes.CreateAndAdd(substrings[0], sides) == 0) {
+    if (shapes.CreateAndAdd(substrings[0], sides) == 0) {  // Shape validation
       flag = true;
       PrintMessage("Shape is invalid. Try again.");
 
