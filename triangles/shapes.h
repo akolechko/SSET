@@ -1,6 +1,6 @@
 #pragma once
-#include "triangle.h"
 #include "square.h"
+#include "triangle.h"
 
 template <class Shape>
 class Shapes {
@@ -24,24 +24,15 @@ class Shapes {
     return 1;
   }
 
-  std::vector<Shape> GetSorted() {
+  std::vector<Shape> GetSortedBy(const std::string& sorted_by) {
     std::vector<Shape> sorted_shapes = shapes_;
 
     std::sort(sorted_shapes.begin(), sorted_shapes.end(),
-              [](const Shape& a, const Shape& b) {
-                return a.GetSortedBy() > b.GetSortedBy();
+              [sorted_by](const Shape& a, const Shape& b) {
+                return a.GetSortedBy(sorted_by) > b.GetSortedBy(sorted_by);
               });
 
     return sorted_shapes;
-  }
-
-  bool SetSortedBy(const std::string& str) {
-    if (shapes_.size() == 0) return 0;
-
-    for (Shape v : shapes_)
-      if (v.SetSortedBy(str) == 0) return 0;
-
-    return 1;
   }
 
  private:

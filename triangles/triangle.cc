@@ -1,8 +1,9 @@
 #include "triangle.h"
 
-std::string Triangle::GetName() const { return name_; }
-
-std::string Triangle::GetClassName() const { return class_name_; }
+Triangle::Triangle() {
+  SetClassName("Triangle");
+  SetProperties({"a"});
+}
 
 double Triangle::GetArea() const {
   double area;
@@ -14,13 +15,11 @@ double Triangle::GetArea() const {
   return area;
 }
 
-double Triangle::GetSortedBy() const {
-  if (sorted_by_ == "a") return GetArea();
+double Triangle::GetSortedBy(const std::string &sorted_by) const {
+  if (sorted_by == "a") return GetArea();
 
   return GetArea();
 }
-
-void Triangle::SetName(const std::string& name) { name_ = name; }
 
 bool Triangle::SetValidSides(std::vector<double> sides) {
   if (sides.size() != 3) return 0;
@@ -34,14 +33,6 @@ bool Triangle::SetValidSides(std::vector<double> sides) {
   if (c + a < b) return 0;
 
   sides_ = sides;
-
-  return 1;
-}
-
-bool Triangle::SetSortedBy(const std::string& str) {
-  if (properties_.find(str) == properties_.end()) return 0;
-
-  sorted_by_ = str;
 
   return 1;
 }
