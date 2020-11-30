@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cc" />
+    <ClCompile Include="square.cc" />
     <ClCompile Include="triangle.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="input_validation.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="shapes.h" />
+    <ClInclude Include="square.h" />
     <ClInclude Include="string_functions.h" />
     <ClInclude Include="triangle.h" />
     <ClInclude Include="user_interface.h" />

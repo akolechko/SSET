@@ -16,6 +16,8 @@ double Triangle::GetArea() const {
 
 double Triangle::GetSortedBy() const {
   if (sorted_by_ == "a") return GetArea();
+
+  return GetArea();
 }
 
 void Triangle::SetName(const std::string& name) { name_ = name; }

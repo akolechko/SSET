@@ -4,7 +4,7 @@
 #include "user_interface.h"
 
 int main() {
-  Shapes<Triangle> shapes;
+  Shapes<Square> shapes;
   std::string delimiter = ",";
   std::string str;
   std::vector<std::string> substrings;
@@ -56,7 +56,8 @@ int main() {
   } while (flag);
 
   std::string class_name;
-  std::vector<Triangle> sorted_shapes = shapes.GetSorted();
+  shapes.SetSortedBy("p");
+  std::vector<Square> sorted_shapes = shapes.GetSorted();
 
   if (shapes.GetClassName(class_name)) {
     PrintHeader(class_name);
@@ -64,7 +65,7 @@ int main() {
     for (int i = 0; i < sorted_shapes.size(); ++i) {
       std::string number = std::to_string(i + 1);
       std::string name = sorted_shapes[i].GetName();
-      std::string area = std::to_string(sorted_shapes[i].GetArea());
+      std::string area = std::to_string(sorted_shapes[i].GetPerimeter());
 
       PrintShape(class_name, number, name, area);
     }
