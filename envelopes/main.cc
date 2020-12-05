@@ -12,6 +12,7 @@ int main(int argc, char** argv) {
     try {
       Envelope e0(string_conversion::StringToDouble(argv[1]),
                   string_conversion::StringToDouble(argv[2]));
+
       Envelope e1(string_conversion::StringToDouble(argv[3]),
                   string_conversion::StringToDouble(argv[4]));
 
@@ -20,14 +21,11 @@ int main(int argc, char** argv) {
       else
         std::cout << "Envelopes doesn't suit." << std::endl;
     } catch (const std::invalid_argument& e) {
-      if (e.what() == "Sides can't be negative.")
         std::cout << e.what() << std::endl;
-      else
-        std::cout << "Input is invalid." << std::endl;
 
       return -1;
-    } catch (std::out_of_range) {
-      std::cout << "Sides are too big." << std::endl;
+    } catch (const std::out_of_range& e) {
+      std::cout << e.what() << std::endl;
 
       return -1;
     }
