@@ -1,9 +1,15 @@
 #pragma once
 class Envelope {
  public:
-  void SetWidthAndHeight(float side1, float side2);
+  Envelope(double a, double b);
+
+  [[nodiscard]] double GetWidth() const;
+  [[nodiscard]] double GetHeight() const;
+  void SetWidthAndHeight(double a, double b);
+
+  bool Fits(const Envelope& envelope);
 
  private:
-  float w_;
-  float h_;
+  double width_;
+  double height_;
 };

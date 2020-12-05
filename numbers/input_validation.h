@@ -1,15 +1,13 @@
 #pragma once
 #include <string>
 
-template <class T>
-bool IsValid(const std::string &str) = delete;
+namespace input_validation {
 
-template <>
-bool IsValid<long>(const std::string &str) {
+bool IsLong(const std::string &str, int base) {
   errno = 0;
   char *endptr;
 
-  (void)strtol(str.c_str(), &endptr, 10);
+  (void)strtol(str.c_str(), &endptr, base);
 
   if (errno != 0) {
     errno = 0;
@@ -21,8 +19,7 @@ bool IsValid<long>(const std::string &str) {
   return 1;
 }
 
-template <>
-bool IsValid<double>(const std::string &str) {
+bool IsDouble(const std::string &str) {
   errno = 0;
   char *endptr;
 
@@ -37,3 +34,5 @@ bool IsValid<double>(const std::string &str) {
 
   return 1;
 }
+
+}  // namespace input_validation

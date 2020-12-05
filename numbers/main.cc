@@ -28,12 +28,13 @@ std::string Translate(long number) {
 
     for (int i = 0; i < 4; ++i) {
       for (int j = 0; j < 2; ++j) {
+        if (i > 0 && j == 0 && number % 1000 != 0)
+          numbers.push(templates[29 + i]);
+
         int remainder = number % static_cast<int>(pow(10, 2 - j));
 
         if (remainder != 0) {
           if (j == 0) {
-            if (i > 0) numbers.push(templates[29 + i]);
-
             if (remainder <= 20) {
               numbers.push(templates[remainder + 1]);
             } else {
@@ -73,7 +74,7 @@ int main() {
     do {
       std::cout << "Enter a valid long integer: ";
       std::cin >> input;
-      input_is_valid = IsValid<long>(input);
+      input_is_valid = input_validation::IsLong(input, 10);
     } while (!input_is_valid);
 
     long number = strtol(input.c_str(), nullptr, 10);
