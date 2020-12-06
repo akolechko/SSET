@@ -16,7 +16,7 @@ long StringToLong(const std::string &str, int base = 10) {
   } catch (std::invalid_argument) {
     throw std::invalid_argument("Invalid input.");
   } catch (std::out_of_range) {
-    throw std::out_of_range("Sides are too big.");
+    throw std::out_of_range("Size is incorrect.");
   }
 }
 
@@ -32,7 +32,7 @@ long long StringToLongLong(const std::string &str, int base = 10) {
   } catch (std::invalid_argument) {
     throw std::invalid_argument("Invalid input.");
   } catch (std::out_of_range) {
-    throw std::out_of_range("Sides are too big.");
+    throw std::out_of_range("Size is incorrect.");
   }
 }
 
