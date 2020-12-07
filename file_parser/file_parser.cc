@@ -18,6 +18,11 @@ FileParser::FileParser(const std::string& path) {
       fs_path.parent_path().string() + fs_path.stem().string() + ".tmp";
 }
 
+FileParser::~FileParser() {
+  if (file_.is_open()) file_.close();
+  if (temp_.is_open()) temp_.close();
+}
+
 long FileParser::CountStr(const std::string& str) {
   file_.open(file_path_);
 
