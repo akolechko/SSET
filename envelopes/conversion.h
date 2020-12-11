@@ -1,55 +1,122 @@
 #pragma once
-#include <stdexcept>
-#include <string>
 
-namespace string_conversion {
+namespace conversion {
 
-long StringToLong(const std::string &str, int base = 10) {
-  size_t idx;
+enum class ErrorCode { kSuccess, kInvalidArgument, kOutOfRange };
 
+ErrorCode StringToInt(const std::string &str, int &value) {
   try {
-    long value = std::stol(str, &idx, base);
+    int value_tmp = 0;
+    size_t idx = 0;
 
-    if (idx != str.length()) throw std::invalid_argument("Invalid input.");
+    value_tmp = std::stoi(str, &idx);
 
-    return value;
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
   } catch (std::invalid_argument) {
-    throw std::invalid_argument("Invalid input.");
+    return ErrorCode::kInvalidArgument;
   } catch (std::out_of_range) {
-    throw std::out_of_range("Size is incorrect.");
+    return ErrorCode::kOutOfRange;
   }
 }
 
-long long StringToLongLong(const std::string &str, int base = 10) {
-  size_t idx;
-
+ErrorCode StringToLong(const std::string &str, long &value) {
   try {
-    long long value = std::stoll(str, &idx, base);
+    long value_tmp = 0;
+    size_t idx = 0;
 
-    if (idx != str.length()) throw std::invalid_argument("Invalid input.");
+    value_tmp = std::stol(str, &idx);
 
-    return value;
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
   } catch (std::invalid_argument) {
-    throw std::invalid_argument("Invalid input.");
+    return ErrorCode::kInvalidArgument;
   } catch (std::out_of_range) {
-    throw std::out_of_range("Size is incorrect.");
+    return ErrorCode::kOutOfRange;
   }
 }
 
-double StringToDouble(const std::string &str) {
-  size_t idx;
-
+ErrorCode StringToUnsignedLong(const std::string &str, unsigned long &value) {
   try {
-    double value = std::stod(str, &idx);
+    unsigned long value_tmp = 0;
+    size_t idx = 0;
 
-    if (idx != str.length()) throw std::invalid_argument("Invalid input.");
+    value_tmp = std::stoul(str, &idx);
 
-    return value;
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
   } catch (std::invalid_argument) {
-    throw std::invalid_argument("Invalid input.");
+    return ErrorCode::kInvalidArgument;
   } catch (std::out_of_range) {
-    throw std::out_of_range("Size is incorrect.");
+    return ErrorCode::kOutOfRange;
   }
 }
 
-}  // namespace string_conversion
+ErrorCode StringToLongLong(const std::string &str, long long &value) {
+  try {
+    long long value_tmp = 0;
+    size_t idx = 0;
+
+    value_tmp = std::stoll(str, &idx);
+
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
+  } catch (std::invalid_argument) {
+    return ErrorCode::kInvalidArgument;
+  } catch (std::out_of_range) {
+    return ErrorCode::kOutOfRange;
+  }
+}
+
+ErrorCode StringToUnsignedLongLong(const std::string &str,
+                                   unsigned long long &value) {
+  try {
+    unsigned long long value_tmp = 0;
+    size_t idx = 0;
+
+    value_tmp = std::stoull(str, &idx);
+
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
+  } catch (std::invalid_argument) {
+    return ErrorCode::kInvalidArgument;
+  } catch (std::out_of_range) {
+    return ErrorCode::kOutOfRange;
+  }
+}
+
+ErrorCode StringToDouble(const std::string &str, double &value) {
+  try {
+    double value_tmp = 0;
+    size_t idx = 0;
+
+    value_tmp = std::stod(str, &idx);
+
+    if (idx != str.length()) return ErrorCode::kInvalidArgument;
+
+    value = value_tmp;
+
+    return ErrorCode::kSuccess;
+  } catch (std::invalid_argument) {
+    return ErrorCode::kInvalidArgument;
+  } catch (std::out_of_range) {
+    return ErrorCode::kOutOfRange;
+  }
+}
+
+}  // namespace conversion

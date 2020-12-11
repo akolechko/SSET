@@ -7,9 +7,10 @@ class Piece {
   virtual char GetType() = 0;
 
  protected:
+  enum Color { kBlack, kWhite };
   unsigned short position_[2];
   // 0 - black | 1 - white
-  bool color_;
+  Color color_;
   char type_;
 };
 

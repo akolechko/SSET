@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     } else {
       std::cout
           << "String counter : <file_location> <string>.\n"
-             "String replacer: <file_location> <string> <string_to_replace>"
+             "String replacer: <file_location> <string> <string_to_replace>."
           << std::endl;
     }
   } catch (const std::invalid_argument& e) {

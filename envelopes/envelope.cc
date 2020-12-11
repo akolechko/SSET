@@ -1,27 +1,20 @@
+#include "stdafx.h"
 #include "envelope.h"
 
-#include <stdexcept>
+Envelope::Envelope(const double& a, const double& b) { SetSize(a, b); }
 
-Envelope::Envelope(double a, double b) { SetWidthAndHeight(a, b); }
+std::array<double, 2> Envelope::GetSize() const { return sides_; }
 
-double Envelope::GetWidth() const { return width_; }
-
-double Envelope::GetHeight() const { return height_; }
-
-void Envelope::SetWidthAndHeight(double a, double b) {
+void Envelope::SetSize(const double& a, const double& b) {
   if (a < 0 || b < 0) throw std::invalid_argument("Sides can't be negative.");
 
-  if (a >= b) {
-    width_ = a;
-    height_ = b;
-  } else {
-    width_ = b;
-    height_ = a;
-  }
+  sides_ = {a, b};
+  std::sort(sides_.begin(), sides_.end());
 }
 
 bool Envelope::Fits(const Envelope& envelope) {
-  if (width_ <= envelope.GetWidth() && height_ <= envelope.GetHeight())
+  if (sides_[kSmallSide] <= envelope.GetSize()[kSmallSide] &&
+      sides_[kBigSide] <= envelope.GetSize()[kBigSide])
     return true;
 
   return false;

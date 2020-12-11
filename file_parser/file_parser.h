@@ -5,7 +5,6 @@
 class FileParser {
  public:
   FileParser(const std::string &path);
-  ~FileParser();
 
   long CountStr(const std::string &str);
   void ReplaceStr(const std::string &str, const std::string &to_replace);

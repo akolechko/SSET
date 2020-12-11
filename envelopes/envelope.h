@@ -1,15 +1,16 @@
 #pragma once
+
 class Envelope {
  public:
-  Envelope(double a, double b);
+  Envelope(const double& a = 0, const double& b = 0);
 
-  [[nodiscard]] double GetWidth() const;
-  [[nodiscard]] double GetHeight() const;
-  void SetWidthAndHeight(double a, double b);
+  [[nodiscard]] std::array<double, 2> GetSize() const;
+  void SetSize(const double& a, const double& b);
 
   bool Fits(const Envelope& envelope);
 
  private:
-  double width_;
-  double height_;
+  enum SideSize { kSmallSide, kBigSide };
+
+  std::array<double, 2> sides_;
 };
