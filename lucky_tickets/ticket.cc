@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-#include "ticket.h"
-
 constexpr short kNumberSize = 6;
 
 Ticket::Ticket(const std::string& number) { SetNumber(number); }
