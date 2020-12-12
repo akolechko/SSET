@@ -141,11 +141,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="file_parser.cc" />
+    <ClCompile Include="file_in.cc" />
+    <ClCompile Include="file_out.cc" />
     <ClCompile Include="main.cc" />
+    <ClCompile Include="text_parser.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="file_parser.h" />
+    <ClInclude Include="file_in.h" />
+    <ClInclude Include="file_out.h" />
+    <ClInclude Include="text_parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

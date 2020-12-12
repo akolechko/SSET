@@ -18,12 +18,24 @@
     <ClCompile Include="main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="file_parser.cc">
+    <ClCompile Include="text_parser.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file_out.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file_in.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="file_parser.h">
+    <ClInclude Include="text_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_in.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
