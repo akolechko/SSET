@@ -75,11 +75,12 @@ void MultiplyBuffers(const std::vector<Buffer>& x_buffers,
 }
 
 void AddBuffers(const std::vector<Buffer>& buffers,
-                std::vector<Buffer>& result_buffers, int max_rank) {
+                std::vector<Buffer>& result_buffers, int& max_rank) {
   for (int i = 0; i <= max_rank; ++i) {
     Buffer result_buffer;
 
     for (Buffer buffer : buffers) {
+      if (buffer.rank > max_rank) max_rank = buffer.rank;
       if (buffer.rank == i) {
         int rank = i;
         unsigned long long number = buffer.number + result_buffer.number;
@@ -95,6 +96,32 @@ void AddBuffers(const std::vector<Buffer>& buffers,
     }
 
     result_buffers.push_back(result_buffer);
+  }
+}
+
+void AddSplit(std::vector<Buffer>& result_buffers, int& max_rank) {
+  std::vector<Buffer> temp;
+  bool less_than_bufsize = false;
+  while (!less_than_bufsize) {
+    less_than_bufsize = true;
+
+    AddBuffers(result_buffers, temp, max_rank);
+
+    result_buffers = temp;
+    temp.clear();
+
+    for (Buffer buffer : result_buffers) {
+      if (std::to_string(buffer.number).length() > kBufSize) {
+        less_than_bufsize = false;
+
+        SplitBuffer(buffer, temp, max_rank);
+      } else {
+        temp.push_back(buffer);
+      }
+    }
+
+    result_buffers = temp;
+    temp.clear();
   }
 }
 
@@ -134,34 +161,48 @@ std::string Multiply(std::string initial_x, std::string initial_y) {
 
   multiplied_buffers.clear();
 
-  std::vector<Buffer> temp;
-  bool is_valid_number = false;
-
-  while (!is_valid_number) {
-    is_valid_number = true;
-
-    AddBuffers(result_buffers, temp, max_rank);
-
-    result_buffers = temp;
-    temp.clear();
-
-    for (Buffer buffer : result_buffers) {
-      if (std::to_string(buffer.number).length() > kBufSize) {
-        is_valid_number = false;
-
-        SplitBuffer(buffer, temp, max_rank);
-      } else {
-        temp.push_back(buffer);
-      }
-    }
-
-    result_buffers = temp;
-    temp.clear();
-  }
+  AddSplit(result_buffers, max_rank);
 
   BuildResultString(result_buffers, result_string, max_rank);
 
   return result_string;
+}
+
+std::string Add(std::string initial_x, std::string initial_y) {
+  std::vector<Buffer> result_buffers;
+  std::string result_string = "";
+  int max_rank = 0;
+
+  int x_len = initial_x.length();
+  int y_len = initial_y.length();
+
+  MakeMultiple(initial_x, x_len);
+  MakeMultiple(initial_y, y_len);
+
+  FillBuffers(result_buffers, initial_x, x_len);
+  FillBuffers(result_buffers, initial_y, y_len);
+
+  AddSplit(result_buffers, max_rank);
+
+  BuildResultString(result_buffers, result_string, max_rank);
+
+  return result_string;
+}
+
+bool Less(std::string initial_x, std::string initial_y) {
+  int x_len = initial_x.length();
+  int y_len = initial_y.length();
+
+  if (x_len < y_len) return true;
+  if (x_len > y_len) return false;
+
+  MakeMultiple(initial_x, x_len);
+  MakeMultiple(initial_y, y_len);
+
+  initial_x = initial_x.substr(0, kBufSize);
+  initial_y = initial_y.substr(0, kBufSize);
+
+  return std::stoull(initial_x) < std::stoull(initial_y);
 }
 
 int main() {
@@ -170,7 +211,9 @@ int main() {
   std::cin >> a;
   std::cin >> b;
 
-  std::cout << Multiply(a, b) << std::endl;
+  for (std::string n = a; Less(Multiply(n, n), b); n = Add(n, "1")) {
+    std::cout << n << std::endl;
+  }
 
   return 0;
 }
