@@ -1,22 +1,12 @@
 #include "piece.h"
 
-unsigned short Rook::Move(unsigned short x, unsigned short y) {
-  if (x == position_[0] && y != position_[1]) {
-    position_[1] = y;
-    // Success
-    return 0;
-  } else if (x != position_[0] && y == position_[1]) {
-    position_[0] = x;
-    // Success
-    return 0;
-  } else if (x == position_[0] && y == position_[1])
-    // Same position
-    return 1;
-  else
-    // Illegal
-    return 2;
+Piece::Piece(char str_repr, const Coordinates &coordinates)
+    : str_repr_(str_repr), coordinates_(coordinates) {}
+
+void Piece::Move(const Coordinates &coordinates) {
+  coordinates_ = coordinates;
 }
 
-bool Rook::GetColor() { return color_; }
+char Piece::GetStrRepr() { return str_repr_; }
 
-char Rook::GetType() { return type_; }
+Coordinates Piece::GetCoordinates() { return coordinates_; }

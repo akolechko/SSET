@@ -15,27 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="checkerboard.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coordinates.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="piece.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="checkerboard.cc">
+    <ClCompile Include="piece_arranger.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cbhandler.cc">
+    <ClCompile Include="string_convertor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="piece.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="checkerboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cbhandler.h">
+    <ClInclude Include="coordinates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="piece.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="piece_arranger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="string_convertor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

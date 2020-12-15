@@ -1,25 +1,19 @@
 #pragma once
+#include <array>
+
+#include "checkerboard.h"
+#include "coordinates.h"
 
 class Piece {
  public:
-  virtual unsigned short Move(unsigned short x, unsigned short y) = 0;
-  virtual bool GetColor() = 0;
-  virtual char GetType() = 0;
+  Piece(char str_repr, const Coordinates &coordinates);
+
+  void Move(const Coordinates &coordinates);
+
+  char GetStrRepr();
+  Coordinates GetCoordinates();
 
  protected:
-  enum Color { kBlack, kWhite };
-  unsigned short position_[2];
-  // 0 - black | 1 - white
-  Color color_;
-  char type_;
-};
-
-class Rook : public Piece {
- public:
-  unsigned short Move(unsigned short x, unsigned short y);
-  bool GetColor();
-  char GetType();
-
- private:
-  char type_ = 'r';
+  char str_repr_;
+  Coordinates coordinates_;
 };
