@@ -14,7 +14,9 @@
     <ClCompile Include="piece_arranger.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="string_convertor.cc">
+      <Filter>checkerboard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

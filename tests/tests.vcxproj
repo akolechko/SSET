@@ -46,7 +46,7 @@
     </ClCompile>
     <ClCompile Include="piece.cc" />
     <ClCompile Include="piece_arranger.cc" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="string_convertor.cc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
