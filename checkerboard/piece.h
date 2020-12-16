@@ -1,5 +1,4 @@
 #pragma once
-#include <array>
 
 #include "checkerboard.h"
 #include "coordinates.h"

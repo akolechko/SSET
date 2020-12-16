@@ -1,3 +1,5 @@
+#include "pch.h"
+
 #include "piece.h"
 
 Piece::Piece(char str_repr, const Coordinates &coordinates)

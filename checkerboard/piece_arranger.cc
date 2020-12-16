@@ -1,3 +1,5 @@
+#include "pch.h"
+
 #include "piece_arranger.h"
 
 PieceArranger::PieceArranger(const CheckerBoard &board,

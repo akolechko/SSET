@@ -1,6 +1,7 @@
-#include <iostream>
+#include "pch.h"
 
 #include "checkerboard.h"
+#include "coordinates.h"
 #include "piece.h"
 #include "piece_arranger.h"
 #include "string_convertor.h"

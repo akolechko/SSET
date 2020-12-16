@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="checkerboard.cc">
+      <Filter>checkerboard</Filter>
+    </ClCompile>
+    <ClCompile Include="coordinates.cc">
+      <Filter>checkerboard</Filter>
+    </ClCompile>
+    <ClCompile Include="piece.cc">
+      <Filter>checkerboard</Filter>
+    </ClCompile>
+    <ClCompile Include="piece_arranger.cc">
+      <Filter>checkerboard</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="checkerboard">
+      <UniqueIdentifier>{29f5e755-575a-4764-ad31-9f82dd70ef80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,6 +1,6 @@
-#include "checkerboard.h"
+#include "pch.h"
 
-#include <string>
+#include "checkerboard.h"
 
 std::string CheckerBoard::GetStrRepr() {
   std::string str_repr = "";

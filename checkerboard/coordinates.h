@@ -1,4 +1,5 @@
 #pragma once
+
 #include "checkerboard.h"
 
 struct Coordinates {
