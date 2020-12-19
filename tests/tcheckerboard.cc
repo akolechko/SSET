@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../checkerboard/checkerboard.cc"
+#include "../checkerboard/checkerboard.h"
 
 TEST(TCheckerBoard, GetStrRepr) {
   CheckerBoard board = {2, 4};

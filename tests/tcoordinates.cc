@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../checkerboard/coordinates.cc"
+#include "../checkerboard/coordinates.h"
 
 TEST(TCoordinates, AreValid) {
   CheckerBoard board = {8, 8};

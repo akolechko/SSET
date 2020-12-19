@@ -1,11 +1,11 @@
 #include "pch.h"
 
-#include "generator.h"
+#include "fibonacci_generator.h"
 #include "string_convertor.h"
 
 int main(int argc, char** argv) {
   if (argc != 3) {
-    std::cout << "Enter the desired range of numbers: "
+    std::cout << "Enter the desired range of the fibonacci numbers: "
                  "<min> <max>"
               << std::endl;
 
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     }
   }
 
-  Generator generator(arguments[0], arguments[1]);
+  FibonacciGenerator generator(arguments[0], arguments[1]);
 
   for (; *generator <= generator.End(); ++generator) {
     std::cout << *generator << std::endl;

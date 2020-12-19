@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../checkerboard/piece.cc"
+#include "../checkerboard/piece.h"
 
 TEST(TPiece, Move) {
   unsigned long expected_row = 20;

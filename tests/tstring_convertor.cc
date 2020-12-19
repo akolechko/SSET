@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../checkerboard/string_convertor.cc"
+#include "../checkerboard/string_convertor.h"
 
 TEST(TStringConvertor, NondigitCharacters) {
   int result = 0;

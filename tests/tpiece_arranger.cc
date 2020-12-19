@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../checkerboard/piece_arranger.cc"
+#include "../checkerboard/piece_arranger.h"
 
 namespace piece_arranger {
 

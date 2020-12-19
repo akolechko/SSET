@@ -2,19 +2,24 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="checkerboard.cc">
+    <ClCompile Include="..\checkerboard\string_convertor.cc" />
+    <ClCompile Include="..\checkerboard\checkerboard.cc" />
+    <ClCompile Include="..\checkerboard\coordinates.cc" />
+    <ClCompile Include="..\checkerboard\piece.cc" />
+    <ClCompile Include="..\checkerboard\piece_arranger.cc" />
+    <ClCompile Include="tstring_convertor.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
-    <ClCompile Include="coordinates.cc">
+    <ClCompile Include="tpiece_arranger.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
-    <ClCompile Include="piece.cc">
+    <ClCompile Include="tpiece.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
-    <ClCompile Include="piece_arranger.cc">
+    <ClCompile Include="tcoordinates.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
-    <ClCompile Include="string_convertor.cc">
+    <ClCompile Include="tcheckerboard.cc">
       <Filter>checkerboard</Filter>
     </ClCompile>
   </ItemGroup>
@@ -25,5 +30,8 @@
     <Filter Include="checkerboard">
       <UniqueIdentifier>{29f5e755-575a-4764-ad31-9f82dd70ef80}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
