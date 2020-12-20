@@ -3,6 +3,7 @@
 #include "../envelopes/envelope.h"
 
 // Constructor, GetSize()
+
 TEST(TestEnvelope, EmptyCtor) {
   Envelope envelope;
 

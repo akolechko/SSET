@@ -44,6 +44,12 @@
     <ClCompile Include="tenvelope_comparator.cc">
       <Filter>envelopes\tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\numerical_sequence\generator.cc">
+      <Filter>numerical_sequence\src</Filter>
+    </ClCompile>
+    <ClCompile Include="tgenerator.cpp">
+      <Filter>numerical_sequence\tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -66,6 +72,15 @@
     </Filter>
     <Filter Include="envelopes\tests">
       <UniqueIdentifier>{1e3639c7-8e26-48c4-8b0b-a69b371564c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numerical_sequence">
+      <UniqueIdentifier>{d521c33b-4a4c-4344-806c-891b0805cf61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numerical_sequence\src">
+      <UniqueIdentifier>{0e47cbbb-41b6-41d5-bf48-508e0705909c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numerical_sequence\tests">
+      <UniqueIdentifier>{7f9ac1e3-9f69-44d1-916f-a4540feef871}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
