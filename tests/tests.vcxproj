@@ -43,6 +43,7 @@
     <ClCompile Include="..\checkerboard\string_convertor.cc" />
     <ClCompile Include="..\envelopes\envelope.cc" />
     <ClCompile Include="..\envelopes\envelope_comparator.cc" />
+    <ClCompile Include="..\fibonacci\fibonacci_generator.cc" />
     <ClCompile Include="..\numerical_sequence\generator.cc" />
     <ClCompile Include="tcheckerboard.cc" />
     <ClCompile Include="tcoordinates.cc" />
@@ -54,6 +55,7 @@
     </ClCompile>
     <ClCompile Include="tenvelope.cc" />
     <ClCompile Include="tenvelope_comparator.cc" />
+    <ClCompile Include="tfibonacci.cpp" />
     <ClCompile Include="tgenerator.cpp" />
     <ClCompile Include="tpiece.cc" />
     <ClCompile Include="tpiece_arranger.cc" />

@@ -50,6 +50,12 @@
     <ClCompile Include="tgenerator.cpp">
       <Filter>numerical_sequence\tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\fibonacci\fibonacci_generator.cc">
+      <Filter>fibonacci\src</Filter>
+    </ClCompile>
+    <ClCompile Include="tfibonacci.cpp">
+      <Filter>fibonacci\tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -81,6 +87,15 @@
     </Filter>
     <Filter Include="numerical_sequence\tests">
       <UniqueIdentifier>{7f9ac1e3-9f69-44d1-916f-a4540feef871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fibonacci">
+      <UniqueIdentifier>{1771ab75-4d2c-459f-b578-3b0ff1f9a942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fibonacci\src">
+      <UniqueIdentifier>{49d659f7-23a5-4d37-922e-d7abb143fc69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fibonacci\tests">
+      <UniqueIdentifier>{61ab7c5f-6056-42c9-95f5-b0d8c0afc4e1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
