@@ -6,7 +6,7 @@ class EnvelopeComparator {
  public:
   EnvelopeComparator(Envelope& first, Envelope& second);
 
-  bool Fit();
+  bool Fit() const;
 
  private:
   enum SideSize { kSmallSide, kBigSide };

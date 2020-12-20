@@ -2,25 +2,47 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="..\checkerboard\string_convertor.cc" />
-    <ClCompile Include="..\checkerboard\checkerboard.cc" />
-    <ClCompile Include="..\checkerboard\coordinates.cc" />
-    <ClCompile Include="..\checkerboard\piece.cc" />
-    <ClCompile Include="..\checkerboard\piece_arranger.cc" />
-    <ClCompile Include="tstring_convertor.cc">
-      <Filter>checkerboard</Filter>
-    </ClCompile>
-    <ClCompile Include="tpiece_arranger.cc">
-      <Filter>checkerboard</Filter>
-    </ClCompile>
-    <ClCompile Include="tpiece.cc">
-      <Filter>checkerboard</Filter>
+    <ClCompile Include="tcheckerboard.cc">
+      <Filter>checkerboard\tests</Filter>
     </ClCompile>
     <ClCompile Include="tcoordinates.cc">
-      <Filter>checkerboard</Filter>
+      <Filter>checkerboard\tests</Filter>
     </ClCompile>
-    <ClCompile Include="tcheckerboard.cc">
-      <Filter>checkerboard</Filter>
+    <ClCompile Include="tpiece.cc">
+      <Filter>checkerboard\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tpiece_arranger.cc">
+      <Filter>checkerboard\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tstring_convertor.cc">
+      <Filter>checkerboard\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\checkerboard\checkerboard.cc">
+      <Filter>checkerboard\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\checkerboard\coordinates.cc">
+      <Filter>checkerboard\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\checkerboard\piece.cc">
+      <Filter>checkerboard\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\checkerboard\piece_arranger.cc">
+      <Filter>checkerboard\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\checkerboard\string_convertor.cc">
+      <Filter>checkerboard\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\envelopes\envelope.cc">
+      <Filter>envelopes\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\envelopes\envelope_comparator.cc">
+      <Filter>envelopes\src</Filter>
+    </ClCompile>
+    <ClCompile Include="tenvelope.cc">
+      <Filter>envelopes\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tenvelope_comparator.cc">
+      <Filter>envelopes\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +51,21 @@
   <ItemGroup>
     <Filter Include="checkerboard">
       <UniqueIdentifier>{29f5e755-575a-4764-ad31-9f82dd70ef80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="checkerboard\tests">
+      <UniqueIdentifier>{b77dd557-0d59-4a31-a128-d6a744faf86b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="checkerboard\src">
+      <UniqueIdentifier>{e25818a9-c034-4898-9b51-b54ef681c937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="envelopes">
+      <UniqueIdentifier>{abc2528f-e134-47fc-8315-7027302cd891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="envelopes\src">
+      <UniqueIdentifier>{2b128f87-b2c5-47eb-8a69-5c7fcebbb074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="envelopes\tests">
+      <UniqueIdentifier>{1e3639c7-8e26-48c4-8b0b-a69b371564c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
