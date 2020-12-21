@@ -21,7 +21,10 @@
     <ClCompile Include="convertor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cc">
+    <ClCompile Include="pch.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="string_convertor.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,11 +32,14 @@
     <ClInclude Include="convertor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="conversion.h">
+    <ClInclude Include="string_convertor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

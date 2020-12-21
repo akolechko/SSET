@@ -120,6 +120,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,14 +146,19 @@
   <ItemGroup>
     <ClCompile Include="convertor.cc" />
     <ClCompile Include="main.cc" />
-    <ClCompile Include="stdafx.cc">
+    <ClCompile Include="pch.cc">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="string_convertor.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="convertor.h" />
-    <ClInclude Include="conversion.h" />
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="string_convertor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,11 +2,16 @@
 
 class Convertor {
  public:
-  Convertor(const long long &number = 0);
+  Convertor(const long long& number = 0);
 
   std::string Convert();
 
  private:
+  enum SingleDoubleType { kDouble, kSingle };
+
+  void SingleDoubleProcessor(int type, int remainder,
+                             std::stack<std::string>& numbers);
+
   long long number_;
   const std::string verbal_repr_[36] = {
       "minus ",      "zero",     "one ",     "two ",       "three ",

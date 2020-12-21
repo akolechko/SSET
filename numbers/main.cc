@@ -1,9 +1,9 @@
-#include "stdafx.h"
+#include "pch.h"
 
-#include "conversion.h"
 #include "convertor.h"
+#include "string_convertor.h"
 
-using EC = conversion::ErrorCode;
+using EC = validation::ErrorCode;
 
 int main(int argc, char** argv) {
   if (argc != 2) {
@@ -14,16 +14,16 @@ int main(int argc, char** argv) {
   }
 
   long long number = 0;
-  EC error_code = conversion::StringToLongLong(argv[1], number);
+  validation::StringConvertor string_convertor(argv[1]);
+  EC error_code = string_convertor.StringToLongLong(number);
 
-  if (error_code == EC::kInvalidArgument) {
-    std::cout << "Number is invalid." << std::endl;
-    return EXIT_FAILURE;
-  }
-
-  if (error_code == EC::kOutOfRange) {
-    std::cout << "Number is too big." << std::endl;
-    return EXIT_FAILURE;
+  switch (error_code) {
+    case EC::kInvalidArgument:
+      std::cout << "Number is invalid." << std::endl;
+      return EXIT_FAILURE;
+    case EC::kOutOfRange:
+      std::cout << "Number is too big." << std::endl;
+      return EXIT_FAILURE;
   }
 
   Convertor convertor(number);
