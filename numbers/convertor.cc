@@ -2,6 +2,7 @@
 
 #include "convertor.h"
 
+constexpr int kMinus = 0;
 constexpr int kNumberOfTriples = 7;
 constexpr int kTripleName = 29;
 constexpr int kTwentyLimit = 20;
@@ -42,7 +43,7 @@ std::string Convertor::Convert() {
     }
   }
 
-  if (!is_positive) numbers.push(verbal_repr_[0]);
+  if (!is_positive) numbers.push(verbal_repr_[kMinus]);
 
   while (!numbers.empty()) {
     result += numbers.top();

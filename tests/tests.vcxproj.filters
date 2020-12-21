@@ -56,6 +56,12 @@
     <ClCompile Include="tfibonacci.cpp">
       <Filter>fibonacci\tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\numbers\convertor.cc">
+      <Filter>numbers\src</Filter>
+    </ClCompile>
+    <ClCompile Include="tconvertor.cc">
+      <Filter>numbers\tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -96,6 +102,15 @@
     </Filter>
     <Filter Include="fibonacci\tests">
       <UniqueIdentifier>{61ab7c5f-6056-42c9-95f5-b0d8c0afc4e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numbers">
+      <UniqueIdentifier>{7890b2e1-0e9d-4115-871d-b6501ce2237b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numbers\src">
+      <UniqueIdentifier>{a8cbb90e-3bfe-4996-9ef9-31e4384d25c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="numbers\tests">
+      <UniqueIdentifier>{b0854966-0348-4407-8329-5176766f115b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

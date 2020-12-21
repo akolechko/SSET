@@ -44,8 +44,10 @@
     <ClCompile Include="..\envelopes\envelope.cc" />
     <ClCompile Include="..\envelopes\envelope_comparator.cc" />
     <ClCompile Include="..\fibonacci\fibonacci_generator.cc" />
+    <ClCompile Include="..\numbers\convertor.cc" />
     <ClCompile Include="..\numerical_sequence\generator.cc" />
     <ClCompile Include="tcheckerboard.cc" />
+    <ClCompile Include="tconvertor.cc" />
     <ClCompile Include="tcoordinates.cc" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
