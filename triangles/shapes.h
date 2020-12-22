@@ -1,4 +1,5 @@
 #pragma once
+
 #include "square.h"
 #include "triangle.h"
 

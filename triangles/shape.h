@@ -1,9 +1,4 @@
 #pragma once
-#include <algorithm>
-#include <cmath>
-#include <set>
-#include <string>
-#include <vector>
 
 class Shape {
  public:

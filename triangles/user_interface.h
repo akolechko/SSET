@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-#include <string>
 
 void PrintMessage(const std::string& str) { std::cout << str << std::endl; }
 

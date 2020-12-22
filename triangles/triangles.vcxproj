@@ -119,6 +119,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,15 +144,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="application.cc" />
     <ClCompile Include="main.cc" />
+    <ClCompile Include="pch.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="shape.cc" />
+    <ClCompile Include="shapes.cc" />
     <ClCompile Include="square.cc" />
+    <ClCompile Include="string_convertor.cc" />
+    <ClCompile Include="string_functions.cc" />
     <ClCompile Include="triangle.cc" />
+    <ClCompile Include="user_interface.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="input_validation.h" />
+    <ClInclude Include="application.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="shapes.h" />
     <ClInclude Include="square.h" />
+    <ClInclude Include="string_convertor.h" />
     <ClInclude Include="string_functions.h" />
     <ClInclude Include="triangle.h" />
     <ClInclude Include="user_interface.h" />
