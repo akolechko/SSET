@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="envelope.cc" />
+    <ClCompile Include="envelopes_view.cc" />
     <ClCompile Include="envelope_comparator.cc" />
     <ClCompile Include="main.cc" />
     <ClCompile Include="pch.cc">
@@ -30,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="envelope.h" />
+    <ClInclude Include="envelopes_view.h" />
     <ClInclude Include="envelope_comparator.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_convertor.h" />

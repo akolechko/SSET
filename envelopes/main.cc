@@ -2,6 +2,7 @@
 
 #include "envelope.h"
 #include "envelope_comparator.h"
+#include "envelopes_view.h"
 #include "string_convertor.h"
 
 constexpr int kNumberOfSides = 4;
@@ -9,43 +10,40 @@ constexpr int kNumberOfSides = 4;
 using EC = validation::ErrorCode;
 
 int main(int argc, char** argv) {
-  if (argc != kNumberOfSides + 1)
-    std::cout << "Enter the width and height of two envelopes"
-                 " to determine whether one suits other"
-              << std::endl;
-  else {
-    double side_sizes[kNumberOfSides]{};
-    EC error_code = EC::kSuccess;
-    validation::StringConvertor convertor;
+  EnvelopesView view(std::cout);
 
-    for (int i = 0; i < kNumberOfSides; ++i) {
-      convertor.SetString(argv[i + 1]);
-      error_code = convertor.StringToDouble(side_sizes[i]);
+  if (argc != kNumberOfSides + 1) {
+    view.PrintIntro();
 
-      switch (error_code) {
-        case EC::kInvalidArgument:
-          std::cout << "Arguments are invalid" << std::endl;
-          return EXIT_FAILURE;
-        case EC::kOutOfRange:
-          std::cout << "Arguments are too big" << std::endl;
-          return EXIT_FAILURE;
-      }
+    return EXIT_FAILURE;
+  }
 
-      if (side_sizes[i] < 0) {
-        std::cout << "Side size must not be negative" << std::endl;
-        return EXIT_FAILURE;
-      }
+  double side_sizes[kNumberOfSides]{};
+  validation::StringConvertor convertor;
+  EC error = EC::kSuccess;
+
+  for (int i = 0; i < kNumberOfSides; ++i) {
+    convertor.SetString(argv[i + 1]);
+    error = convertor.StringToDouble(side_sizes[i]);
+
+    if (error != EC::kSuccess) {
+      view.PrintError(error);
+
+      return EXIT_FAILURE;
     }
 
-    Envelope first(side_sizes[0], side_sizes[1]);
-    Envelope second(side_sizes[2], side_sizes[3]);
-    EnvelopeComparator comparator(first, second);
+    if (side_sizes[i] < 0) {
+      view.PrintMessage("Side size must not be negative");
 
-    if (comparator.Fit())
-      std::cout << "Envelopes suit each other." << std::endl;
-    else
-      std::cout << "Envelopes doesn't suit." << std::endl;
+      return EXIT_FAILURE;
+    }
   }
+
+  Envelope first(side_sizes[0], side_sizes[1]);
+  Envelope second(side_sizes[2], side_sizes[3]);
+  EnvelopeComparator comparator(first, second);
+
+  view.PrintComparisonResult(comparator.Fit());
 
   return EXIT_SUCCESS;
 }
