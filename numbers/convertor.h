@@ -7,7 +7,7 @@ class Convertor {
 
   void SetNumber(long long number);
 
-  std::string Convert();
+  std::vector<std::string> Convert();
 
  private:
   enum SubnumberType { kTwoDigits, kOneDigit };

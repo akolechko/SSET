@@ -12,13 +12,17 @@ Convertor::Convertor(long long number) : number_(number) {}
 
 void Convertor::SetNumber(long long number) { number_ = number; }
 
-std::string Convertor::Convert() {
+std::vector<std::string> Convertor::Convert() {
   bool is_positive = true;
   int remainder = 0;
   std::stack<std::string> subnumbers;
-  std::string result = "";
+  std::vector<std::string> result;
 
-  if (!number_) return verbal_repr_[1];
+  if (!number_) {
+    result.push_back(verbal_repr_[1]);
+
+    return result;
+  }
 
   if (number_ < 0) {
     is_positive = false;
@@ -42,10 +46,8 @@ std::string Convertor::Convert() {
   if (!is_positive) subnumbers.push(verbal_repr_[kMinus]);
 
   while (!subnumbers.empty()) {
-    result += subnumbers.top();
+    result.push_back(subnumbers.top());
     subnumbers.pop();
-
-    if (!subnumbers.empty()) result += ' ';
   }
 
   return result;

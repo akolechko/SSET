@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="convertor.cc" />
     <ClCompile Include="main.cc" />
+    <ClCompile Include="numbers_view.cc" />
     <ClCompile Include="pch.cc">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
@@ -154,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="convertor.h" />
+    <ClInclude Include="numbers_view.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_convertor.h" />
   </ItemGroup>
