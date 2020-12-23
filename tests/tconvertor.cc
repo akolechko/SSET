@@ -36,31 +36,31 @@ TEST(TestConvertor, Convert) {
 
   std::vector<char*> expected;
   expected.push_back("zero");
-  expected.push_back("one ");
-  expected.push_back("twelve ");
-  expected.push_back("one hundred twenty three ");
-  expected.push_back("one thousand two hundred thirty four ");
+  expected.push_back("one");
+  expected.push_back("twelve");
+  expected.push_back("one hundred twenty three");
+  expected.push_back("one thousand two hundred thirty four");
   expected.push_back(
-      "one million two hundred thirty four thousand five hundred sixty seven ");
-  expected.push_back("one million five hundred sixty seven ");
-  expected.push_back("twelve ");
-  expected.push_back("one hundred twenty three ");
-  expected.push_back("one thousand ");
-  expected.push_back("nine hundred eighty seven ");
+      "one million two hundred thirty four thousand five hundred sixty seven");
+  expected.push_back("one million five hundred sixty seven");
+  expected.push_back("twelve");
+  expected.push_back("one hundred twenty three");
+  expected.push_back("one thousand");
+  expected.push_back("nine hundred eighty seven");
   expected.push_back(
       "nine hundred eighty seven million six hundred fifty four thousand three "
-      "hundred twenty one ");
-  expected.push_back("eighty seven million fifty four thousand twenty one ");
-  expected.push_back("seven ");
-  expected.push_back("ten ");
-  expected.push_back("nineteen ");
+      "hundred twenty one");
+  expected.push_back("eighty seven million fifty four thousand twenty one");
+  expected.push_back("seven");
+  expected.push_back("ten");
+  expected.push_back("nineteen");
   expected.push_back(
       "forty trillion one billion five hundred million eleven thousand eight "
-      "hundred six ");
+      "hundred six");
   expected.push_back(
       "five trillion seven hundred ninety four billion two hundred million "
-      "sixty one thousand four hundred sixteen ");
-  expected.push_back("nine trillion ");
+      "sixty one thousand four hundred sixteen");
+  expected.push_back("nine trillion");
 
    for (int i = 0; i < 19; ++i) {
     Convertor* convertor = new Convertor(entries[i]);

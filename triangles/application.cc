@@ -1,6 +1,8 @@
 #include "pch.h"
 
 #include "application.h"
+#include "shapes.h"
+#include "string_convertor.h"
 #include "string_functions.h"
 #include "user_interface.h"
 
@@ -17,7 +19,7 @@ int Application::Run() {
     return EXIT_FAILURE;
   }
 
-  std::string input = "";
+  std::string input;
   for (int i = 1; i < argc_; ++i) input += argv_[i];
   bool args_are_used = false;
 
@@ -41,7 +43,7 @@ int Application::Run() {
 
     params = StringSplitter(input, delimiter);
 
-    for (int i = 1; i < params.size(); ++i) {
+    for (size_t i = 1; i < params.size(); ++i) {
       convertor.SetString(params[i]);
       error = convertor.StringToDouble(side);
 

@@ -1,8 +1,5 @@
 #pragma once
 
-#include "shapes.h"
-#include "string_convertor.h"
-
 class Application {
  public:
   Application(int argc, char** argv);

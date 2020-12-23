@@ -6,7 +6,7 @@ class FibonacciGenerator {
   FibonacciGenerator(unsigned long long end);
   FibonacciGenerator(unsigned long long begin, unsigned long long end);
 
-  unsigned long long End();
+  [[nodiscard]] unsigned long long End() const;
 
   void Next();
 

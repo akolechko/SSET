@@ -27,6 +27,9 @@
     <ClCompile Include="pch.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fibonacci_view.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fibonacci_generator.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fibonacci_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

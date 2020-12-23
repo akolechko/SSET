@@ -7,7 +7,7 @@ using EC = validation::ErrorCode;
 
 int main(int argc, char** argv) {
   if (argc != 2) {
-    std::cout << "Number to verbal representation convertor: <number>."
+    std::cout << "Number to verbal representation convertor: <number>"
               << std::endl;
 
     return EXIT_FAILURE;

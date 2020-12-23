@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="fibonacci_generator.cc" />
+    <ClCompile Include="fibonacci_view.cc" />
     <ClCompile Include="main.cc" />
     <ClCompile Include="pch.cc">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fibonacci_generator.h" />
+    <ClInclude Include="fibonacci_view.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_convertor.h" />
   </ItemGroup>

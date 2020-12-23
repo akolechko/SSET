@@ -12,7 +12,7 @@ FibonacciGenerator::FibonacciGenerator(unsigned long long begin,
   while (current_ < begin) Next();
 }
 
-unsigned long long FibonacciGenerator::End() { return end_; }
+unsigned long long FibonacciGenerator::End() const { return end_; }
 
 void FibonacciGenerator::Next() {
   previous_ = previous_ + current_;
