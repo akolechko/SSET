@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="application.cc" />
     <ClCompile Include="envelope.cc" />
     <ClCompile Include="envelopes_view.cc" />
     <ClCompile Include="envelope_comparator.cc" />
@@ -30,14 +31,12 @@
     <ClCompile Include="string_convertor.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="application.h" />
     <ClInclude Include="envelope.h" />
     <ClInclude Include="envelopes_view.h" />
     <ClInclude Include="envelope_comparator.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_convertor.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

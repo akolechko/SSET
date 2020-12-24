@@ -2,7 +2,8 @@
 
 #include "envelopes_view.h"
 
-EnvelopesView::EnvelopesView(std::ostream& out) : out_(out) {}
+EnvelopesView::EnvelopesView(std::ostream& out, std::istream& in)
+    : out_(out), in_(in) {}
 
 void EnvelopesView::PrintIntro() {
   out_ << "Enter the width and height of two envelopes to determine whether "
@@ -30,4 +31,9 @@ void EnvelopesView::PrintError(const validation::ErrorCode& error) {
 void EnvelopesView::PrintComparisonResult(bool fit) {
   fit ? out_ << "Envelopes suit each other." << std::endl
       : out_ << "Envelopes doesn't suit." << std::endl;
+}
+
+void EnvelopesView::RequestData(std::string& str, const std::string& msg) {
+  if (!msg.empty()) out_ << msg;
+  in_ >> str;
 }

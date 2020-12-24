@@ -33,6 +33,9 @@
     <ClCompile Include="envelopes_view.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="application.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="envelope.h">
@@ -50,8 +53,8 @@
     <ClInclude Include="envelopes_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
