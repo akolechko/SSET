@@ -7,7 +7,7 @@
 TEST(TestConvertor, EmptyCtor) {
   Convertor convertor;
 
-  EXPECT_STREQ("zero", convertor.Convert().c_str());
+  EXPECT_STREQ("zero", convertor.Convert()[0].c_str());
 }
 
 // Convert()
@@ -64,7 +64,15 @@ TEST(TestConvertor, Convert) {
 
    for (int i = 0; i < 19; ++i) {
     Convertor* convertor = new Convertor(entries[i]);
-    EXPECT_STREQ(expected[i], convertor->Convert().c_str());
+    std::string result;
+    std::vector<std::string> subnumbers = convertor->Convert();
+
+    for (int j = 0; j < subnumbers.size(); ++j) {
+      if (j != 0) result += ' ';
+      result += subnumbers[j];
+    }
+
+    EXPECT_STREQ(expected[i], result.c_str());
     delete convertor;
   }
 }
